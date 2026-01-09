@@ -2,6 +2,9 @@ import { Button } from "../ui/Button"
 import Logo from "../ui/Logo"
 import { SearchBar } from "../ui/SearchBar"
 import { DiamondPlus } from 'lucide-react';
+import BurgerMenu from "./burger/BugerMenu";
+
+
 
 export const TopBar = () => {
     return (
@@ -12,9 +15,12 @@ export const TopBar = () => {
             <div className="flex-1 lg:block max-lg:hidden">
                 <SearchBar/>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 max-sm:hidden">
                 <Button outline text="Établir la liaison" link="/"/>
                 <Button icon={<DiamondPlus/>} text="Vider sa soute" link="/"/>
+            </div>
+            <div  className="max-sm:block sm:hidden text-slate-50">
+            <BurgerMenu/>
             </div>
         </div>
     )

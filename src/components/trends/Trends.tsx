@@ -26,16 +26,34 @@ export const Trends = () => {
     ]
 
     return (
-        <div className="grid grid-cols-5 text-slate-50 gap-6">
-            <div className="h-80 bg-purple-600 text-2xl font-bold p-6 flex flex-col gap-5 rounded-lg">
-                <Flame className="w-12 h-12"/>
-                <p className="wrap-break-word">Cargaisons chaudes</p>
-            </div>
-            {
-                trends.map((trend, index) => (
-                    <TrendsCards key={index} img={trend.img} title={trend.title} link={trend.link}/>
-                ))
-            }
-        </div>
+        <div className="grid
+        
+        lg:grid-cols-5
+        max-lg:grid-flow-col
+    
+    max-lg:auto-cols-max
+    max-lg:gap-6
+    max-lg:w-full
+    max-lg:max-w-full
+    max-lg:overflow-x-auto
+    max-lg:overflow-y-hidden
+    max-lg:snap-x max-lg:snap-mandatory
+    text-slate-50
+    ">
+            <div className="snap-start  w-70 h-80 bg-purple-600 text-2xl font-bold p-6 flex flex-col gap-5 rounded-lg max-sm:hidden sm:block justify-center items-center">
+    <Flame className="w-12 h-12" />
+    <p className="wrap-break-word">Cargaisons chaudes</p>
+  </div>
+
+  {trends.map((trend, index) => (
+    <div key={index} className="snap-start shrink-0 w-70">
+      <TrendsCards
+        img={trend.img}
+        title={trend.title}
+        link={trend.link}
+      />
+    </div>
+  ))}
+</div>
     )
 }

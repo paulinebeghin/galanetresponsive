@@ -14,7 +14,7 @@ export const Navbar = () => {
 
             <div className="hidden max-lg:block">
 
-                <MainNav> <li className="  snap-start px-4 py-2 border rounded-full  
+                <MainNav styleB={true}><li className="  snap-start px-4  py-2 border rounded-full  
                         max-lg:border-purple-600
                         max-lg:border 
                         max-lg:bg-purple-600/25
@@ -24,7 +24,7 @@ export const Navbar = () => {
                         max-lg:p-3">Voir tout</li></MainNav>
             </div>
             <div className="max-lg:hidden">
-            <MainNav/>
+            <MainNav styleB={true}/>
             </div>
         </div>
     )

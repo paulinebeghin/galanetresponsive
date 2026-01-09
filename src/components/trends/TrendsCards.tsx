@@ -8,7 +8,7 @@ export const TrendsCards = ({img, title, link} : Props) => {
     return (
         <a
             href={link}
-            className="h-80 bg-cover bg-center p-2 rounded-lg flex items-end"
+            className="h-80 bg-cover bg-center p-2 rounded-lg flex items-end  max-lg:overflow-auto "
             style={{ backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url(${img})` }}
         >
             <p className="text-lg font-bold">{title}</p>
